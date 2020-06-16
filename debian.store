@@ -1,1 +1,1 @@
-{"trim": "", "base": "5acdbcb", "trimbase": "", "parent": "debian/foxy/gpsd_client", "previous": "2c92e23"}
+{"base": "ec70aad", "parent": "debian/rolling/gpsd_client", "previous": "bede121", "trim": "", "trimbase": ""}
