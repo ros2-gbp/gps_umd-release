@@ -1,1 +1,1 @@
-{"trim": "", "base": "81369ae", "trimbase": "", "parent": "release/foxy/gpsd_client", "previous": "a56710a"}
+{"base": "abc3183", "parent": "release/rolling/gpsd_client", "previous": "728173f", "trim": "", "trimbase": ""}
