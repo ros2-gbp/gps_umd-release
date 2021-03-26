@@ -1,3 +1,30 @@
+## gps_umd (rolling) - 1.0.4-1
+
+The packages in the `gps_umd` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --track rolling --rosdistro rolling gps_umd` on `Fri, 26 Mar 2021 12:40:40 -0000`
+
+These packages were released:
+- `gps_msgs`
+- `gps_tools`
+- `gps_umd`
+- `gpsd_client`
+
+Version of package(s) in repository `gps_umd`:
+
+- upstream repository: https://github.com/swri-robotics/gps_umd.git
+- release repository: https://github.com/ros2-gbp/gps_umd-release.git
+- rosdistro version: `1.0.3-2`
+- old version: `1.0.3-2`
+- new version: `1.0.4-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.22`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.2`
+- vcstools version: `0.1.42`
+
+
 ## gps_umd (foxy) - 1.0.4-1
 
 The packages in the `gps_umd` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy gps_umd` on `Fri, 14 Aug 2020 20:49:19 -0000`
@@ -76,6 +103,12 @@ Versions of tools used:
 - catkin_pkg version: `0.4.22`
 - rosdep version: `0.19.0`
 - rosdistro version: `0.8.2`
+=======
+- bloom version: `0.10.3`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.20.0`
+- rosdistro version: `0.8.3`
+>>>>>>> f40fc86 (Updating README.md)
 - vcstools version: `0.1.42`
 
 
