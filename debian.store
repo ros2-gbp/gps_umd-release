@@ -1,1 +1,1 @@
-{"base": "1fe08f6", "parent": "debian/rolling/gps_tools", "previous": "5e3a232", "trim": "", "trimbase": ""}
+{"base": "c3110fd", "parent": "debian/galactic/gps_tools", "previous": "c3c4b44", "trim": "", "trimbase": ""}
