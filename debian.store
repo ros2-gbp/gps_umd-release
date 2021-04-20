@@ -1,1 +1,1 @@
-{"base": "8a1bbed", "parent": "debian/rolling/gps_umd", "previous": "65fe308", "trim": "", "trimbase": ""}
+{"base": "07b8b59", "parent": "debian/galactic/gps_umd", "previous": "b23e312", "trim": "", "trimbase": ""}
