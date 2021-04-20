@@ -1,0 +1,12 @@
+Source: ros-galactic-gpsd-client
+Section: misc
+Priority: optional
+Maintainer: P. J. Reed <preed@swri.org>
+Build-Depends: debhelper (>= 9.0.0), libgps-dev, pkg-config, ros-galactic-ament-cmake, ros-galactic-gps-msgs, ros-galactic-rclcpp, ros-galactic-rclcpp-components, ros-galactic-sensor-msgs, ros-galactic-ros-workspace
+Homepage: http://ros.org/wiki/gpsd_client
+Standards-Version: 3.9.2
+
+Package: ros-galactic-gpsd-client
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgps-dev, pkg-config, ros-galactic-gps-msgs, ros-galactic-rclcpp, ros-galactic-rclcpp-components, ros-galactic-sensor-msgs, ros-galactic-ros-workspace
+Description: connects to a GPSd server and broadcasts GPS fixes using the NavSatFix message
