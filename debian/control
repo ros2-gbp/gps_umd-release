@@ -1,0 +1,12 @@
+Source: ros-rolling-gps-tools
+Section: misc
+Priority: optional
+Maintainer: P. J. Reed <preed@swri.org>
+Build-Depends: debhelper (>= 9.0.0), ros-rolling-ament-cmake, ros-rolling-ament-cmake-python, ros-rolling-gps-msgs, ros-rolling-nav-msgs, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-rolling-rclpy, ros-rolling-sensor-msgs, ros-rolling-std-msgs, ros-rolling-ros-workspace
+Homepage: http://ros.org/wiki/gps_common
+Standards-Version: 3.9.2
+
+Package: ros-rolling-gps-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-rolling-gps-msgs, ros-rolling-nav-msgs, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-rolling-rclpy, ros-rolling-sensor-msgs, ros-rolling-std-msgs, ros-rolling-ros-workspace
+Description: GPS routines for use in GPS drivers
