@@ -1,1 +1,1 @@
-{"base": "a3dd681", "parent": "debian/rolling/gpsd_client", "previous": "742a5a2", "trim": "", "trimbase": ""}
+{"base": "486007a", "parent": "debian/iron/gpsd_client", "previous": "abb7974", "trim": "", "trimbase": ""}
