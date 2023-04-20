@@ -1,0 +1,56 @@
+ros-iron-gps-umd (1.0.4-5jammy) jammy; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Thu, 13 Aug 2020 16:00:00 -0000
+
+ros-iron-gps-umd (1.0.3-5jammy) jammy; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Tue, 09 Jun 2020 16:00:00 -0000
+
+ros-iron-gps-umd (1.0.2-5jammy) jammy; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Wed, 04 Mar 2020 16:00:00 -0000
+
+ros-iron-gps-umd (1.0.1-5jammy) jammy; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Wed, 04 Mar 2020 16:00:00 -0000
+
+ros-iron-gps-umd (1.0.0-5jammy) jammy; urgency=high
+
+  * Support ROS2 (#24 <https://github.com/pjreed/gps_umd/issues/24>)
+  * Contributors: P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Thu, 03 Oct 2019 16:00:00 -0000
+
+ros-iron-gps-umd (0.3.0-5jammy) jammy; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Wed, 02 Oct 2019 16:00:00 -0000
+
+ros-iron-gps-umd (0.2.0-5jammy) jammy; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Wed, 15 Nov 2017 16:00:00 -0000
+
+ros-iron-gps-umd (0.1.9-5jammy) jammy; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Sun, 07 May 2017 16:00:00 -0000
+
+ros-iron-gps-umd (0.1.8-5jammy) jammy; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Sun, 30 Oct 2016 16:00:00 -0000
+
+
