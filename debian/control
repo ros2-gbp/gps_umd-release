@@ -1,0 +1,12 @@
+Source: ros-foxy-gps-umd
+Section: misc
+Priority: optional
+Maintainer: Southwest Research Institute <swri-robotics@swri.org>
+Build-Depends: debhelper (>= 9.0.0), ros-foxy-ament-cmake, ros-foxy-ros-workspace
+Homepage: http://ros.org/wiki/gps_umd
+Standards-Version: 3.9.2
+
+Package: ros-foxy-gps-umd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-foxy-gps-msgs, ros-foxy-gps-tools, ros-foxy-gpsd-client, ros-foxy-ros-workspace
+Description: gps_umd metapackage
