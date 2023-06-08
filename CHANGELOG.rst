@@ -2,6 +2,9 @@
 Changelog for package gpsd_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.9 (2023-06-08)
+------------------
+
 1.0.8 (2023-04-04)
 ------------------
 * Updating authors and maintainers
