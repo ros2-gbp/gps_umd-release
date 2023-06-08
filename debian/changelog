@@ -1,0 +1,135 @@
+ros-foxy-gpsd-client (1.0.9-1focal) focal; urgency=high
+
+
+
+ -- Southwest Research Institute <swri-robotics@swri.org>  Thu, 08 Jun 2023 05:00:00 -0000
+
+ros-foxy-gpsd-client (1.0.8-1focal) focal; urgency=high
+
+  * Updating authors and maintainers
+  * Contributors: David Anthony
+
+ -- Southwest Research Institute <swri-robotics@swri.org>  Tue, 04 Apr 2023 05:00:00 -0000
+
+ros-foxy-gpsd-client (1.0.7-1focal) focal; urgency=high
+
+  * Fixing Exports (#73 <https://github.com/swri-robotics/gps_umd/issues/73>)
+  * Contributors: David Anthony
+
+ -- Southwest Research Institute <swri-robotics@swri.org>  Tue, 04 Apr 2023 05:00:00 -0000
+
+ros-foxy-gpsd-client (1.0.6-1focal) focal; urgency=high
+
+  * Fixing Foxy regression (#67 <https://github.com/swri-robotics/gps_umd/issues/67>)
+    Addresses https://github.com/swri-robotics/gps_umd/issues/66
+  * Contributors: David Anthony
+
+ -- Southwest Research Institute <swri-robotics@swri.org>  Fri, 23 Sep 2022 05:00:00 -0000
+
+ros-foxy-gpsd-client (1.0.5-1focal) focal; urgency=high
+
+  * Cleaner shutdown after unload
+  * Fix build issues with gpsd 3.21 and 3.23
+  * Fixing build warnings about deprecated API. DISTRIBUTION A. Approved for public release; distribution unlimited. OPSEC #4584 <https://github.com/swri-robotics/gps_umd/issues/4584> (#61 <https://github.com/swri-robotics/gps_umd/issues/61>)
+  * Adding debug message to help diagnose failures (#60 <https://github.com/swri-robotics/gps_umd/issues/60>)
+  * User configurable publish rate (#58 <https://github.com/swri-robotics/gps_umd/issues/58>)
+  * Fix ros2 component topics (#46 <https://github.com/swri-robotics/gps_umd/issues/46>)
+  * Contributors: Dave Mohamad, David Anthony, Philip Cheney
+  * Updating changelogs
+  * Ros2 devel for GPSD 3.21 and 3.22 (#65 <https://github.com/danthony06/gps_umd/issues/65>)
+    * Better defaults
+    * cleaner shutdown after unload
+    * fix build issues with gpsd 3.21 and 3.23
+    * Revert "fix build issues with gpsd 3.21 and 3.23"
+    This reverts commit eaa7c7870696757d33224a2b969544560552583c.
+    * fix build issues with gpsd 3.21 and 3.23
+    * Revert "Better defaults"
+    This reverts commit c0b66d610128cdcd9855585d8b67055d06e015c8.
+  * Fixing build warnings about deprecated API. DISTRIBUTION A. Approved for public release; distribution unlimited. OPSEC #4584 <https://github.com/danthony06/gps_umd/issues/4584> (#61 <https://github.com/danthony06/gps_umd/issues/61>)
+  * Adding debug message to help diagnose failures (#60 <https://github.com/danthony06/gps_umd/issues/60>)
+  * ros2-devel: user configurable publish rate (#58 <https://github.com/danthony06/gps_umd/issues/58>)
+    * Add user configurable publish rate
+    * Add demo launch file
+    * declare parameters
+    * Update gpsd_client-launch.py
+    Remove license, use project license
+  * Fix ros2 component topics (#46 <https://github.com/danthony06/gps_umd/issues/46>)
+    * Fix ros2 component topics
+    Emit gps/navsat fix messages on timer tick.
+    * Update gpsd_client/src/client.cpp
+    Co-authored-by: Sivert Havso <mailto:sivert@havso.net>
+    Co-authored-by: David Anthony <mailto:djanthony@gmail.com>
+    Co-authored-by: Sivert Havso <mailto:sivert@havso.net>
+  * Contributors: Dave Mohamad, David Anthony, Philip Cheney
+
+ -- Southwest Research Institute <swri-robotics@swri.org>  Tue, 30 Aug 2022 05:00:00 -0000
+
+ros-foxy-gpsd-client (1.0.4-1focal) focal; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Fri, 14 Aug 2020 05:00:00 -0000
+
+ros-foxy-gpsd-client (1.0.3-1focal) focal; urgency=high
+
+  * Foxy support (#29 <https://github.com/swri-robotics/gps_umd/issues/29>)
+  * Contributors: P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Wed, 10 Jun 2020 05:00:00 -0000
+
+ros-foxy-gpsd-client (1.0.2-1focal) focal; urgency=high
+
+  * Fix for gpsd-3.19 compatibility (#26 <https://github.com/swri-robotics/gps_umd/issues/26>)
+  * Contributors: P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Thu, 05 Mar 2020 06:00:00 -0000
+
+ros-foxy-gpsd-client (1.0.1-1focal) focal; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Thu, 05 Mar 2020 06:00:00 -0000
+
+ros-foxy-gpsd-client (1.0.0-1focal) focal; urgency=high
+
+  * Support ROS2 (#24 <https://github.com/pjreed/gps_umd/issues/24>)
+  * Contributors: P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Fri, 04 Oct 2019 05:00:00 -0000
+
+ros-foxy-gpsd-client (0.3.0-1focal) focal; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Thu, 03 Oct 2019 05:00:00 -0000
+
+ros-foxy-gpsd-client (0.2.0-1focal) focal; urgency=high
+
+  * Add include for <cmath> in gpsd_client
+  * Add parameter to set frame_id.
+  * Contributors: Kris Kozak, P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Thu, 16 Nov 2017 06:00:00 -0000
+
+ros-foxy-gpsd-client (0.1.9-1focal) focal; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Mon, 08 May 2017 05:00:00 -0000
+
+ros-foxy-gpsd-client (0.1.8-1focal) focal; urgency=high
+
+  * Use pre-processor defines to handle different libgps API versions
+    Fixes #1 <https://github.com/swri-robotics/gps_umd/issues/1>
+  * Contributors: P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Mon, 31 Oct 2016 05:00:00 -0000
+
+ros-foxy-gpsd-client (0.1.7-1focal) focal; urgency=high
+
+  * Fix a segfault when there is no GPS fix: time will be NaN which causes the ROS timestamp message to throw a Boost rounding exception.
+  * Contributors: Stuart Alldritt
+
+ -- P. J. Reed <preed@swri.org>  Thu, 08 May 2014 05:00:00 -0000
+
+
