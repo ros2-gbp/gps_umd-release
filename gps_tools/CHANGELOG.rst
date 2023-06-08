@@ -2,6 +2,11 @@
 Changelog for package gps_tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.9 (2023-06-08)
+------------------
+* Backporting CMake and package.xml fixes (`#77 <https://github.com/swri-robotics/gps_umd/issues/77>`_)
+* Contributors: David Anthony
+
 1.0.8 (2023-04-04)
 ------------------
 * Updating authors and maintainers
