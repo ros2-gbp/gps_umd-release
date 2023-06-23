@@ -1,3 +1,30 @@
+## gps_umd (foxy) - 1.0.10-1
+
+The packages in the `gps_umd` repository were released into the `foxy` distro by running `/usr/bin/bloom-release --edit --rosdistro foxy gps_umd` on `Fri, 23 Jun 2023 19:40:45 -0000`
+
+These packages were released:
+- `gps_msgs`
+- `gps_tools`
+- `gps_umd`
+- `gpsd_client`
+
+Version of package(s) in repository `gps_umd`:
+
+- upstream repository: https://github.com/swri-robotics/gps_umd.git
+- release repository: https://github.com/ros2-gbp/gps_umd-release.git
+- rosdistro version: `1.0.9-1`
+- old version: `1.0.9-1`
+- new version: `1.0.10-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## gps_umd (humble) - 2.0.2-1
 
 The packages in the `gps_umd` repository were released into the `humble` distro by running `/usr/bin/bloom-release --edit --rosdistro humble gps_umd` on `Fri, 23 Jun 2023 19:38:36 -0000`
