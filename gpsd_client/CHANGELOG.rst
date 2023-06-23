@@ -2,6 +2,11 @@
 Changelog for package gpsd_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.10 (2023-06-23)
+-------------------
+* Declare host and port as parameters. Backport of https://github.com/swri-robotics/gps_umd/pull/80
+* Contributors: David Anthony, Aposhian 
+
 1.0.9 (2023-06-08)
 ------------------
 
