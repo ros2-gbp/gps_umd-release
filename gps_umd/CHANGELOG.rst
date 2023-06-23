@@ -2,28 +2,22 @@
 Changelog for package gps_umd
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.0.9 (2023-06-08)
+2.0.2 (2023-06-23)
 ------------------
-* Backporting CMake and package.xml fixes (`#77 <https://github.com/swri-robotics/gps_umd/issues/77>`_)
-* Contributors: David Anthony
 
-1.0.8 (2023-04-04)
+2.0.1 (2023-06-08)
 ------------------
-* Updating authors and maintainers
+* Fixing build warning in colcon caused by unknown build system (`#75 <https://github.com/swri-robotics/gps_umd/issues/75>`_)
 * Contributors: David Anthony
 
 1.0.7 (2023-04-04)
 ------------------
-* Fixing Exports (`#73 <https://github.com/swri-robotics/gps_umd/issues/73>`_)
-* Contributors: David Anthony
 
-1.0.6 (2022-09-23)
+1.0.6 (2023-04-04)
 ------------------
 
 1.0.5 (2022-08-30)
 ------------------
-* Updating changelogs
-* Contributors: David Anthony
 
 1.0.4 (2020-08-14)
 ------------------

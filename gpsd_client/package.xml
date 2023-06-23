@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <package format="3">
   <name>gpsd_client</name>
-  <version>1.0.9</version>
+  <version>2.0.2</version>
   <description>connects to a GPSd server and broadcasts GPS fixes 
    using the NavSatFix message</description>
 
-  <maintainer email="swri-robotics@swri.org">Southwest Research Institute</maintainer>
-  <author email="preed@swri.org">P. J. Reed</author>
+  <maintainer email="preed@swri.org">P. J. Reed</maintainer>
   <author email="ken@tossell.net">Ken Tossell</author>
   <author email="rob@umd.edu">Rob Thomson</author>
 
