@@ -1,0 +1,12 @@
+Source: ros-iron-gps-tools
+Section: misc
+Priority: optional
+Maintainer: P. J. Reed <preed@swri.org>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ament-cmake, ros-iron-ament-cmake-python, ros-iron-gps-msgs, ros-iron-nav-msgs, ros-iron-rclcpp, ros-iron-rclcpp-components, ros-iron-rclpy, ros-iron-sensor-msgs, ros-iron-std-msgs, ros-iron-ros-workspace
+Homepage: http://ros.org/wiki/gps_common
+Standards-Version: 3.9.2
+
+Package: ros-iron-gps-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-iron-gps-msgs, ros-iron-nav-msgs, ros-iron-rclcpp, ros-iron-rclcpp-components, ros-iron-rclpy, ros-iron-sensor-msgs, ros-iron-std-msgs, ros-iron-ros-workspace
+Description: GPS routines for use in GPS drivers
