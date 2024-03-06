@@ -320,4 +320,5 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/swri-robotics/gps_umd.git
-    version: :{auto}
+    version: 1.0.4
+    version_saved: :{auto}
