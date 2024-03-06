@@ -1,0 +1,69 @@
+ros-rolling-gps-tools (1.0.4-5bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Fri, 14 Aug 2020 00:00:00 -0000
+
+ros-rolling-gps-tools (1.0.3-5bookworm) bookworm; urgency=high
+
+  * Foxy support (#29 <https://github.com/swri-robotics/gps_umd/issues/29>)
+  * Contributors: P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Wed, 10 Jun 2020 00:00:00 -0000
+
+ros-rolling-gps-tools (1.0.2-5bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Thu, 05 Mar 2020 00:00:00 -0000
+
+ros-rolling-gps-tools (1.0.1-5bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Thu, 05 Mar 2020 00:00:00 -0000
+
+ros-rolling-gps-tools (1.0.0-5bookworm) bookworm; urgency=high
+
+  * Support ROS2 (#24 <https://github.com/pjreed/gps_umd/issues/24>)
+  * Contributors: P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Fri, 04 Oct 2019 00:00:00 -0000
+
+ros-rolling-gps-tools (0.3.0-5bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Thu, 03 Oct 2019 00:00:00 -0000
+
+ros-rolling-gps-tools (0.2.0-5bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Thu, 16 Nov 2017 00:00:00 -0000
+
+ros-rolling-gps-tools (0.1.9-5bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Mon, 08 May 2017 00:00:00 -0000
+
+ros-rolling-gps-tools (0.1.8-5bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Mon, 31 Oct 2016 00:00:00 -0000
+
+ros-rolling-gps-tools (0.1.7-5bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Thu, 08 May 2014 01:05:33 +0000
+
+ros-rolling-gps-tools (0.1.6-5bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Fri, 02 Aug 2013 09:59:00 -0000
+
+
