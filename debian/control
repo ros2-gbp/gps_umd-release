@@ -1,0 +1,12 @@
+Source: ros-rolling-gpsd-client
+Section: misc
+Priority: optional
+Maintainer: P. J. Reed <preed@swri.org>
+Build-Depends: debhelper (>= 9.0.0), ament-cmake, libgps-dev, libsensor-msgs-dev, pkg-config, python3-sensor-msgs, ros-rolling-gps-msgs, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-sensor-msgs, ros-rolling-ros-workspace
+Homepage: http://ros.org/wiki/gpsd_client
+Standards-Version: 3.9.2
+
+Package: ros-rolling-gpsd-client
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgps-dev, libsensor-msgs-dev, pkg-config, python3-sensor-msgs, ros-rolling-gps-msgs, ros-rolling-rclcpp, ros-rolling-rclcpp-components, ros-sensor-msgs, ros-rolling-ros-workspace
+Description: connects to a GPSd server and broadcasts GPS fixes using the NavSatFix message
