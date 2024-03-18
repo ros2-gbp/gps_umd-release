@@ -5,7 +5,10 @@
 #include <sensor_msgs/msg/nav_sat_status.hpp>
 #include <libgpsmm.h>
 
+#include <chrono>
 #include <cmath>
+
+using namespace std::chrono_literals;
 
 namespace gpsd_client
 {
@@ -17,22 +20,37 @@ namespace gpsd_client
       gps_(nullptr),
       use_gps_time_(true),
       check_fix_by_variance_(true),
-      frame_id_("gps")
-    {}
+      frame_id_("gps"),
+      publish_rate_(1)
+    {
+      start();
+      timer_ = create_wall_timer(publish_period_ms, std::bind(&GPSDClientComponent::step, this));
+      RCLCPP_INFO(this->get_logger(), "Instantiated.");
+    }
 
     bool start()
     {
+      this->declare_parameter("use_gps_time", rclcpp::PARAMETER_BOOL);
+      this->declare_parameter("check_fix_by_variance", rclcpp::PARAMETER_BOOL);
+      this->declare_parameter("frame_id", rclcpp::PARAMETER_STRING);
+      this->declare_parameter("publish_rate", rclcpp::PARAMETER_INTEGER);
+      this->declare_parameter("host", rclcpp::PARAMETER_STRING);
+      this->declare_parameter("port", rclcpp::PARAMETER_INTEGER);
+
       gps_fix_pub_ = create_publisher<gps_msgs::msg::GPSFix>("extended_fix", 1);
       navsatfix_pub_ = create_publisher<sensor_msgs::msg::NavSatFix>("fix", 1);
 
-      get_parameter_or("use_gps_time", use_gps_time_, use_gps_time_);
-      get_parameter_or("check_fix_by_variance", check_fix_by_variance_, check_fix_by_variance_);
-      get_parameter_or("frame_id", frame_id_, frame_id_);
+      this->get_parameter_or("use_gps_time", use_gps_time_, use_gps_time_);
+      this->get_parameter_or("check_fix_by_variance", check_fix_by_variance_, check_fix_by_variance_);
+      this->get_parameter_or("frame_id", frame_id_, frame_id_);
+      this->get_parameter_or("publish_rate", publish_rate_, publish_rate_);
+
+      publish_period_ms = std::chrono::milliseconds{(int)(1000 / publish_rate_)};
 
       std::string host = "localhost";
       int port = 2947;
-      get_parameter_or("host",  host, host);
-      get_parameter_or("port", port, port);
+      this->get_parameter_or("host", host, host);
+      this->get_parameter_or("port", port, port);
 
       char port_s[12];
       snprintf(port_s, 12, "%d", port);
@@ -151,16 +169,30 @@ namespace gpsd_client
         status.satellite_visible_snr[i] = p->ss[i];
 #endif
       }
-
+#if GPSD_API_MAJOR_VERSION >= 10
+#ifdef STATUS_FIX
+      if ((p->fix.status & STATUS_FIX) && !(check_fix_by_variance_ && std::isnan(p->fix.epx)))
+#else
+      if ((p->fix.status & STATUS_GPS) && !(check_fix_by_variance_ && std::isnan(p->fix.epx)))
+#endif
+#else
       if ((p->status & STATUS_FIX) && !(check_fix_by_variance_ && std::isnan(p->fix.epx)))
+#endif
       {
         status.status = 0; // FIXME: gpsmm puts its constants in the global
         // namespace, so `GPSStatus::STATUS_FIX' is illegal.
 
 // STATUS_DGPS_FIX was removed in API version 6 but re-added afterward
 #if GPSD_API_MAJOR_VERSION != 6
-        if (p->status & STATUS_DGPS_FIX)
-          status.status |= 18; // same here
+#if GPSD_API_MAJOR_VERSION >= 10
+#ifdef STATUS_DGPS_FIX
+      if (p->fix.status & STATUS_DGPS_FIX)
+#else
+      if (p->fix.status & STATUS_DGPS)
+#endif
+#else
+      if (p->status & STATUS_DGPS_FIX)
+#endif
 #endif
 
 #if GPSD_API_MAJOR_VERSION >= 9
@@ -207,6 +239,7 @@ namespace gpsd_client
 
       fix.status = status;
 
+      RCLCPP_DEBUG(this->get_logger(), "Publishing gps fix...");
       gps_fix_pub_->publish(fix);
     }
 
@@ -234,17 +267,33 @@ namespace gpsd_client
        * so we need to use the ROS message's integer values
        * for status.status
        */
+#if GPSD_API_MAJOR_VERSION >= 10
+      switch (p->fix.status)
+#else
       switch (p->status)
+#endif
       {
+#ifdef STATUS_NO_FIX
         case STATUS_NO_FIX:
+#else
+        case STATUS_UNK:
+#endif
           fix->status.status = -1; // NavSatStatus::STATUS_NO_FIX;
           break;
+#ifdef STATUS_FIX
         case STATUS_FIX:
+#else
+        case STATUS_GPS:
+#endif
           fix->status.status = 0; // NavSatStatus::STATUS_FIX;
           break;
 // STATUS_DGPS_FIX was removed in API version 6 but re-added afterward
 #if GPSD_API_MAJOR_VERSION != 6
+#ifdef STATUS_DGPS_FIX
         case STATUS_DGPS_FIX:
+#else
+        case STATUS_DGPS:
+#endif
           fix->status.status = 2; // NavSatStatus::STATUS_GBAS_FIX;
           break;
 #endif
@@ -262,6 +311,10 @@ namespace gpsd_client
        */
       if (std::isnan(p->fix.epx) && check_fix_by_variance_)
       {
+        RCLCPP_DEBUG_THROTTLE(this->get_logger(),
+          *this->get_clock(),
+          1000,
+          "GPS status was reported as OK, but variance was invalid");
         return;
       }
 
@@ -271,6 +324,7 @@ namespace gpsd_client
 
       fix->position_covariance_type = sensor_msgs::msg::NavSatFix::COVARIANCE_TYPE_DIAGONAL_KNOWN;
 
+      RCLCPP_DEBUG(this->get_logger(), "Publishing navsatfix...");
       navsatfix_pub_->publish(std::move(fix));
     }
 
@@ -282,6 +336,9 @@ namespace gpsd_client
     bool use_gps_time_;
     bool check_fix_by_variance_;
     std::string frame_id_;
+    int publish_rate_;
+    std::chrono::milliseconds publish_period_ms{};
+    rclcpp::TimerBase::SharedPtr timer_;
   };
 }
 
