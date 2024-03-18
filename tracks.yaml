@@ -310,14 +310,14 @@ tracks:
       :{release_inc} --os-name fedora
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc} --os-name rhel
-    devel_branch: dashing-devel
+    devel_branch: ros2-devel
     last_version: 1.0.4
     name: upstream
     patches: null
     release_inc: '5'
     release_repo_url: null
-    release_tag: :{version}
+    release_tag: 2.0.3
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/swri-robotics/gps_umd.git
-    version: :{auto}
+    version: 2.0.3
