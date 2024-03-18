@@ -2,6 +2,30 @@
 Changelog for package gps_tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.3 (2023-09-06)
+------------------
+
+2.0.2 (2023-06-23)
+------------------
+
+2.0.1 (2023-06-08)
+------------------
+* Fixed Iron Build Error (`#76 <https://github.com/swri-robotics/gps_umd/issues/76>`_)
+* Contributors: RoboTech Vision
+
+1.0.7 (2023-04-04)
+------------------
+* Specifying correct libraries to export (`#71 <https://github.com/swri-robotics/gps_umd/issues/71>`_)
+* Contributors: David Anthony
+
+1.0.6 (2023-04-04)
+------------------
+
+1.0.5 (2022-08-30)
+------------------
+* Fix truncation warning for UTM zone snprintf() (`#45 <https://github.com/swri-robotics/gps_umd/issues/45>`_)
+* Contributors: Kevin Hallenbeck
+
 1.0.4 (2020-08-14)
 ------------------
 
