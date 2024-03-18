@@ -2,6 +2,36 @@
 Changelog for package gpsd_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.3 (2023-09-06)
+------------------
+* Fix uninitialized parameter exception in gpsd_client (`#83 <https://github.com/swri-robotics/gps_umd/issues/83>`_)
+* Contributors: Erik Botö
+
+2.0.2 (2023-06-23)
+------------------
+* declare host and port parameters (`#80 <https://github.com/swri-robotics/gps_umd/issues/80>`_)
+* Contributors: Adam Aposhian
+
+2.0.1 (2023-06-08)
+------------------
+
+1.0.7 (2023-04-04)
+------------------
+
+1.0.6 (2023-04-04)
+------------------
+
+1.0.5 (2022-08-30)
+------------------
+* Cleaner shutdown after unload
+* Fix build issues with gpsd 3.21 and 3.23
+* Fixing build warnings about deprecated API. DISTRIBUTION A. Approved for public release; distribution unlimited. OPSEC `#4584 <https://github.com/swri-robotics/gps_umd/issues/4584>`_ (`#61 <https://github.com/swri-robotics/gps_umd/issues/61>`_)
+* Adding debug message to help diagnose failures (`#60 <https://github.com/swri-robotics/gps_umd/issues/60>`_)
+* User configurable publish rate (`#58 <https://github.com/swri-robotics/gps_umd/issues/58>`_)
+ * Add demo launch file
+* Fix ros2 component topics (`#46 <https://github.com/swri-robotics/gps_umd/issues/46>`_)
+* Contributors: Dave Mohamad, David Anthony, Philip Cheney
+
 1.0.4 (2020-08-14)
 ------------------
 
