@@ -1,0 +1,12 @@
+Source: ros-jazzy-gps-tools
+Section: misc
+Priority: optional
+Maintainer: P. J. Reed <preed@swri.org>
+Build-Depends: debhelper (>= 9.0.0), ament-cmake, ament-cmake-python, libnav-msgs-dev, libsensor-msgs-dev, libstd-msgs-dev, python3-nav-msgs, python3-sensor-msgs, python3-std-msgs, ros-jazzy-gps-msgs, ros-jazzy-rclcpp, ros-jazzy-rclcpp-components, ros-jazzy-rclpy, ros-nav-msgs, ros-sensor-msgs, ros-std-msgs, ros-jazzy-ros-workspace
+Homepage: http://ros.org/wiki/gps_common
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-gps-tools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libnav-msgs-dev, libsensor-msgs-dev, libstd-msgs-dev, python3-nav-msgs, python3-sensor-msgs, python3-std-msgs, ros-jazzy-gps-msgs, ros-jazzy-rclcpp, ros-jazzy-rclcpp-components, ros-jazzy-rclpy, ros-nav-msgs, ros-sensor-msgs, ros-std-msgs, ros-jazzy-ros-workspace
+Description: GPS routines for use in GPS drivers
