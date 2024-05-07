@@ -1,0 +1,121 @@
+ros-rolling-gpsd-client (2.0.4-1bookworm) bookworm; urgency=high
+
+  * Fix queue build up issue in gpsd_client (#89 <https://github.com/swri-robotics/gps_umd/issues/89>)
+  * Updating CI process (#85 <https://github.com/swri-robotics/gps_umd/issues/85>)
+  * Contributors: David Anthony, Erik Botö
+
+ -- Southwest Research Institute <swri-robotics@swri.org>  Tue, 07 May 2024 05:00:00 -0000
+
+ros-rolling-gpsd-client (2.0.3-1bookworm) bookworm; urgency=high
+
+  * Fix uninitialized parameter exception in gpsd_client (#83 <https://github.com/swri-robotics/gps_umd/issues/83>)
+  * Contributors: Erik Botö
+
+ -- P. J. Reed <preed@swri.org>  Wed, 06 Sep 2023 05:00:00 -0000
+
+ros-rolling-gpsd-client (2.0.2-1bookworm) bookworm; urgency=high
+
+  * declare host and port parameters (#80 <https://github.com/swri-robotics/gps_umd/issues/80>)
+  * Contributors: Adam Aposhian
+
+ -- P. J. Reed <preed@swri.org>  Fri, 23 Jun 2023 05:00:00 -0000
+
+ros-rolling-gpsd-client (2.0.1-1bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Thu, 08 Jun 2023 05:00:00 -0000
+
+ros-rolling-gpsd-client (1.0.7-1bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Tue, 04 Apr 2023 05:00:00 -0000
+
+ros-rolling-gpsd-client (1.0.6-1bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Tue, 04 Apr 2023 05:00:00 -0000
+
+ros-rolling-gpsd-client (1.0.5-1bookworm) bookworm; urgency=high
+
+  * Cleaner shutdown after unload
+  * Fix build issues with gpsd 3.21 and 3.23
+  * Fixing build warnings about deprecated API. DISTRIBUTION A. Approved for public release; distribution unlimited. OPSEC #4584 <https://github.com/swri-robotics/gps_umd/issues/4584> (#61 <https://github.com/swri-robotics/gps_umd/issues/61>)
+  * Adding debug message to help diagnose failures (#60 <https://github.com/swri-robotics/gps_umd/issues/60>)
+  * User configurable publish rate (#58 <https://github.com/swri-robotics/gps_umd/issues/58>)
+  * Fix ros2 component topics (#46 <https://github.com/swri-robotics/gps_umd/issues/46>)
+  * Contributors: Dave Mohamad, David Anthony, Philip Cheney
+
+ -- P. J. Reed <preed@swri.org>  Tue, 30 Aug 2022 05:00:00 -0000
+
+ros-rolling-gpsd-client (1.0.4-1bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Fri, 14 Aug 2020 05:00:00 -0000
+
+ros-rolling-gpsd-client (1.0.3-1bookworm) bookworm; urgency=high
+
+  * Foxy support (#29 <https://github.com/swri-robotics/gps_umd/issues/29>)
+  * Contributors: P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Wed, 10 Jun 2020 05:00:00 -0000
+
+ros-rolling-gpsd-client (1.0.2-1bookworm) bookworm; urgency=high
+
+  * Fix for gpsd-3.19 compatibility (#26 <https://github.com/swri-robotics/gps_umd/issues/26>)
+  * Contributors: P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Thu, 05 Mar 2020 06:00:00 -0000
+
+ros-rolling-gpsd-client (1.0.1-1bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Thu, 05 Mar 2020 06:00:00 -0000
+
+ros-rolling-gpsd-client (1.0.0-1bookworm) bookworm; urgency=high
+
+  * Support ROS2 (#24 <https://github.com/pjreed/gps_umd/issues/24>)
+  * Contributors: P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Fri, 04 Oct 2019 05:00:00 -0000
+
+ros-rolling-gpsd-client (0.3.0-1bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Thu, 03 Oct 2019 05:00:00 -0000
+
+ros-rolling-gpsd-client (0.2.0-1bookworm) bookworm; urgency=high
+
+  * Add include for <cmath> in gpsd_client
+  * Add parameter to set frame_id.
+  * Contributors: Kris Kozak, P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Thu, 16 Nov 2017 06:00:00 -0000
+
+ros-rolling-gpsd-client (0.1.9-1bookworm) bookworm; urgency=high
+
+
+
+ -- P. J. Reed <preed@swri.org>  Mon, 08 May 2017 05:00:00 -0000
+
+ros-rolling-gpsd-client (0.1.8-1bookworm) bookworm; urgency=high
+
+  * Use pre-processor defines to handle different libgps API versions
+    Fixes #1 <https://github.com/swri-robotics/gps_umd/issues/1>
+  * Contributors: P. J. Reed
+
+ -- P. J. Reed <preed@swri.org>  Mon, 31 Oct 2016 05:00:00 -0000
+
+ros-rolling-gpsd-client (0.1.7-1bookworm) bookworm; urgency=high
+
+  * Fix a segfault when there is no GPS fix: time will be NaN which causes the ROS timestamp message to throw a Boost rounding exception.
+  * Contributors: Stuart Alldritt
+
+ -- P. J. Reed <preed@swri.org>  Thu, 08 May 2014 05:00:00 -0000
+
+
