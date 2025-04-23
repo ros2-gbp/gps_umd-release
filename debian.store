@@ -1,1 +1,1 @@
-{"base": "fcc6296", "parent": "debian/rolling/gps_umd", "previous": "3f67aa9", "trim": "", "trimbase": ""}
+{"base": "6ae14e298dd8", "parent": "debian/kilted/gps_umd", "previous": "b6733203d6f3", "trim": "", "trimbase": ""}
