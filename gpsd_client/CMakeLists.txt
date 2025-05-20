@@ -7,32 +7,52 @@ find_package(ament_cmake REQUIRED)
 
 find_package(gps_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(rclcpp_components REQUIRED)
+find_package(rclcpp_components REQUIRED rclcpp_components)
 find_package(sensor_msgs REQUIRED)
 
-find_package(PkgConfig REQUIRED)
-pkg_check_modules (libgps REQUIRED libgps)
+# Try to find libgps, first with CMake's usual library search method, then by
+# querying pkg-config.
+find_library(libgps_LIBRARIES NAMES gps)
+find_path(libgps_INCLUDE_DIRS NAMES libgpsmm.h gps.h)
+
+if(NOT libgps_LIBRARIES)
+  message(STATUS "Checking pkg-config for libgps")
+  find_package(PkgConfig)
+  if(PkgConfig_FOUND)
+    pkg_check_modules(libgps libgps)
+  endif()
+endif()
+
+if(NOT libgps_LIBRARIES)
+  message(FATAL_ERROR "Could not find libgps "
+                      "(hint for Debian/Ubuntu: apt install libgps-dev)")
+else()
+  message(STATUS "Found libgps: ${libgps_LIBRARIES}")
+endif()
 
 add_library(${PROJECT_NAME} SHARED
-  src/client.cpp
-)
+  src/client.cpp)
+
 target_include_directories(${PROJECT_NAME}
   PUBLIC
-  ${libgps_INCLUDE_DIRS}
-)
+    ${rclcpp_components_INCLUDE_DIRS}
+    ${libgps_INCLUDE_DIRS}
+    ${gps_msgs_INCLUDE_DIRS}
+    ${sensor_msgs_INCLUDE_DIRS})
+
 target_compile_definitions(${PROJECT_NAME}
-  PRIVATE "COMPOSITION_BUILDING_DLL"
-)
+  PRIVATE "COMPOSITION_BUILDING_DLL")
+
 rclcpp_components_register_nodes(${PROJECT_NAME} "gpsd_client::GPSDClientComponent")
-target_link_libraries(${PROJECT_NAME}
+
+target_link_libraries(${PROJECT_NAME} PUBLIC
+  ${gps_msgs_LIBRARIES}
   ${libgps_LIBRARIES}
-)
-ament_target_dependencies(${PROJECT_NAME}
-  "gps_msgs"
-  "rclcpp"
-  "rclcpp_components"
-  "sensor_msgs"
-)
+  rclcpp::rclcpp
+  rclcpp_components::component
+  rclcpp_components::component_manager
+  ${sensor_msgs_LIBRARIES})
+
 
 #############
 ## Install ##
