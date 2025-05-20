@@ -48,12 +48,12 @@ namespace gpsd_client
       publish_period_ms = std::chrono::milliseconds{(int)(1000 / publish_rate_)};
 
       std::string host = "localhost";
-      int port = 2947;
+      int port = atoi(DEFAULT_GPSD_PORT);
       this->get_parameter_or("host", host, host);
       this->get_parameter_or("port", port, port);
 
       char port_s[12];
-      snprintf(port_s, 12, "%d", port);
+      snprintf(port_s, sizeof(port_s), "%d", port);
 
       gps_data_t* resp = nullptr;
 
@@ -177,12 +177,12 @@ namespace gpsd_client
       }
 #if GPSD_API_MAJOR_VERSION >= 10
 #ifdef STATUS_FIX
-      if ((p->fix.status & STATUS_FIX) && !(check_fix_by_variance_ && std::isnan(p->fix.epx)))
+      if (((p->fix.mode == MODE_2D) || (p->fix.mode == MODE_3D)) && !(check_fix_by_variance_ && std::isnan(p->fix.epx)))
 #else
-      if ((p->fix.status & STATUS_GPS) && !(check_fix_by_variance_ && std::isnan(p->fix.epx)))
+      if (((p->fix.mode == MODE_2D) || (p->fix.mode == MODE_3D)) && !(check_fix_by_variance_ && std::isnan(p->fix.epx)))
 #endif
 #else
-      if ((p->status & STATUS_FIX) && !(check_fix_by_variance_ && std::isnan(p->fix.epx)))
+      if (((p->fix.mode == MODE_2D) || (p->fix.mode == MODE_3D)) && !(check_fix_by_variance_ && std::isnan(p->fix.epx)))
 #endif
       {
         status.status = 0; // FIXME: gpsmm puts its constants in the global
@@ -208,7 +208,14 @@ namespace gpsd_client
 #endif
         fix.latitude = p->fix.latitude;
         fix.longitude = p->fix.longitude;
-        fix.altitude = p->fix.altitude;
+        if (p->fix.mode == MODE_3D)
+        {
+          fix.altitude = p->fix.altitude;
+        }
+        else
+        {
+          fix.altitude = std::nan("");
+        }
         fix.track = p->fix.track;
         fix.speed = p->fix.speed;
         fix.climb = p->fix.climb;
