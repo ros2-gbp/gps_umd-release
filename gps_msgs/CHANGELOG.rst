@@ -2,6 +2,9 @@
 Changelog for package gps_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.0 (2025-05-27)
+------------------
+
 2.0.5 (2025-05-20)
 ------------------
 * Added RTK fix/float enums (`#94 <https://github.com/swri-robotics/gps_umd/issues/94>`_)
