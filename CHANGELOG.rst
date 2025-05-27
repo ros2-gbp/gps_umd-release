@@ -2,6 +2,11 @@
 Changelog for package gpsd_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.0 (2025-05-27)
+------------------
+* Update deprecated call to ament_target_dependencies (`#110 <https://github.com/swri-robotics/gps_umd/issues/110>`_)
+* Contributors: David V. Lu!!, David Anthony
+
 2.0.5 (2025-05-20)
 ------------------
 * Removing all ament_target_dependencies() calls (`#111 <https://github.com/swri-robotics/gps_umd/issues/111>`_)
