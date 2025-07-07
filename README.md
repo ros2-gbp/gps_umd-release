@@ -1,3 +1,30 @@
+## gps_umd (humble) - 2.1.1-1
+
+The packages in the `gps_umd` repository were released into the `humble` distro by running `/usr/bin/bloom-release --edit --rosdistro humble gps_umd` on `Mon, 07 Jul 2025 14:50:37 -0000`
+
+These packages were released:
+- `gps_msgs`
+- `gps_tools`
+- `gps_umd`
+- `gpsd_client`
+
+Version of package(s) in repository `gps_umd`:
+
+- upstream repository: https://github.com/swri-robotics/gps_umd.git
+- release repository: https://github.com/ros2-gbp/gps_umd-release.git
+- rosdistro version: `2.1.0-1`
+- old version: `2.1.0-1`
+- new version: `2.1.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## gps_umd (rolling) - 2.1.0-1
 
 The packages in the `gps_umd` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --edit --rosdistro rolling gps_umd` on `Tue, 27 May 2025 19:07:29 -0000`
