@@ -220,11 +220,11 @@ tracks:
     patches: null
     release_inc: '1'
     release_repo_url: null
-    release_tag: 2.1.0
+    release_tag: 2.1.1
     ros_distro: jazzy
     vcs_type: git
     vcs_uri: https://github.com/swri-robotics/gps_umd.git
-    version: 2.1.0
+    version: 2.1.1
   kilted:
     actions:
     - bloom-export-upstream :{vcs_local_uri} :{vcs_type} --tag :{release_tag} --display-uri
