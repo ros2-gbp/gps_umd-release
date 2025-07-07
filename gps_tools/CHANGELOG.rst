@@ -2,6 +2,12 @@
 Changelog for package gps_tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.1 (2025-07-07)
+------------------
+* Declare parameters so they correctly load. (`#115 <https://github.com/swri-robotics/gps_umd/issues/115>`_)
+  Co-authored-by: James Pace <jpace121@gmail.com>
+* Contributors: jpace121
+
 2.1.0 (2025-05-27)
 ------------------
 * Update deprecated call to ament_target_dependencies (`#110 <https://github.com/swri-robotics/gps_umd/issues/110>`_)
