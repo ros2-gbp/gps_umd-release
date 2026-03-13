@@ -2,6 +2,9 @@
 Changelog for package gps_tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.2 (2026-03-13)
+------------------
+
 2.1.1 (2025-07-07)
 ------------------
 * Declare parameters so they correctly load. (`#115 <https://github.com/swri-robotics/gps_umd/issues/115>`_)
