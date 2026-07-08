@@ -4,6 +4,8 @@ Changelog for package gpsd_client
 
 2.2.0 (2026-07-08)
 ------------------
+* Change service status to default value in Humble
+  Updated GPSD API version handling for service status.
 * gpsd_client: fix GPS status mapping and satellite PRN reporting (`#119 <https://github.com/swri-robotics/gps_umd/issues/119>`_)
   Restore corrected-fix status handling that was accidentally broken during
   the gpsd API 10 migration.  The DGPS/SBAS/RTK status checks now have real
@@ -22,7 +24,7 @@ Changelog for package gpsd_client
   Also harden startup by avoiding timer creation when gpsd fails to open and
   guarding against invalid publish_rate values before computing the timer
   period.
-* Contributors: engnfrc
+* Contributors: David Anthony, engnfrc
 
 2.1.2 (2026-03-13)
 ------------------
