@@ -2,10 +2,20 @@
 Changelog for package gpsd_client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+3.1.0 (2026-07-22)
+------------------
+* Cleaning up unreachable code from include guards (`#125 <https://github.com/swri-robotics/gps_umd/issues/125>`_)
+* Added user ability to override correction source (`#124 <https://github.com/swri-robotics/gps_umd/issues/124>`_)
+  * Adding flag to override augmentation source of corrections
+  * Adding parameters to readme. Also making sure the default yaml and code defaults match each other
+* Implement Version Specific GPSd Parsers (`#120 <https://github.com/swri-robotics/gps_umd/issues/120>`_)
+  * Implementing parsing functionality as version specific parsers rather than conditionally compiling code.
+  ---------
+  Co-authored-by: DangitBen <30333928+DangitBen@users.noreply.github.com>
+* Contributors: David Anthony
+
 2.2.0 (2026-07-08)
 ------------------
-* Change service status to default value in Humble
-  Updated GPSD API version handling for service status.
 * gpsd_client: fix GPS status mapping and satellite PRN reporting (`#119 <https://github.com/swri-robotics/gps_umd/issues/119>`_)
   Restore corrected-fix status handling that was accidentally broken during
   the gpsd API 10 migration.  The DGPS/SBAS/RTK status checks now have real
@@ -24,7 +34,7 @@ Changelog for package gpsd_client
   Also harden startup by avoiding timer creation when gpsd fails to open and
   guarding against invalid publish_rate values before computing the timer
   period.
-* Contributors: David Anthony, engnfrc
+* Contributors: engnfrc
 
 2.1.2 (2026-03-13)
 ------------------
