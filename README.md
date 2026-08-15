@@ -1,3 +1,30 @@
+## gps_umd (lyrical) - 3.1.1-1
+
+The packages in the `gps_umd` repository were released into the `lyrical` distro by running `/usr/bin/bloom-release --edit --rosdistro lyrical gps_umd` on `Sat, 15 Aug 2026 22:06:58 -0000`
+
+These packages were released:
+- `gps_msgs`
+- `gps_tools`
+- `gps_umd`
+- `gpsd_client`
+
+Version of package(s) in repository `gps_umd`:
+
+- upstream repository: https://github.com/swri-robotics/gps_umd.git
+- release repository: https://github.com/ros2-gbp/gps_umd-release.git
+- rosdistro version: `3.1.0-1`
+- old version: `3.1.0-1`
+- new version: `3.1.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## gps_umd (kilted) - 3.1.1-1
 
 The packages in the `gps_umd` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --edit --rosdistro kilted gps_umd` on `Sat, 15 Aug 2026 22:03:30 -0000`
